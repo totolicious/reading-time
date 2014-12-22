@@ -1,6 +1,6 @@
 {
   "name": "reading-time-ms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple function that estimates the reading duration of a string",
   "main": "index.js",
   "directories": {
