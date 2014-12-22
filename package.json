@@ -1,0 +1,28 @@
+{
+  "name": "reading-time-ms",
+  "version": "1.0.0",
+  "description": "Simple function that estimates the reading duration of a string",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/totolicious/reading-time.git"
+  },
+  "keywords": [
+    "reading",
+    "time",
+    "timeout",
+    "duration"
+  ],
+  "author": "Gabriel Totoliciu <npm@totoliciu.ro>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totolicious/reading-time/issues"
+  },
+  "homepage": "https://github.com/totolicious/reading-time"
+}
