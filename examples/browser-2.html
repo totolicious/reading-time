@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="content"></div>
+	<div id="progress" style="position:fixed; bottom: 0; left: 0; width: 50%; height: 10px; background: red; overflow: hiddden"></div>
+	<script src="../index.js"></script>
+	<script>
+		var startDate, progressInterval, progressEl = document.getElementById('progress');
+		function animateTimeBar(animationTime) {
+			
+			startDate = Date.now();
+			
+			if (progressInterval) {
+				clearInterval(progressInterval);
+			}
+
+			progressInterval = setInterval(function() {
+
+				var progress = Math.min(100, (Date.now() - startDate) * 100 / animationTime);
+				
+				if (progress === 100) {
+					clearInterval(progressInterval);
+				}
+
+				progressEl.style.width = progress+'%';
+			}, 100);
+		};
+
+		[
+		'test test test',
+		'zece doi zece',
+		'we begin in 3, 2, 1...',
+		'Hello! This is a script that estimates the reading speed of a user',
+		'You can give it small text',
+		'Or rather large paragraphs like this one. The default speed is set to 180 words per minute, which means that this will be comfortable enough for users to read. You can add whatever text you want',
+		'The script is useful for setting automatic timeouts for popups. This lets you worry less about what timers to set.',
+		'You can also specify a minimum timer if you consider that a specific timer is not enough',
+		''
+		].reduce(function(previousTimeout, text) {
+			var readDuration = readingTime(text),
+				timeoutDuration = previousTimeout + readDuration;
+			setTimeout(function() {
+				document.getElementById('content').innerHTML = text;
+				animateTimeBar(readDuration);
+			}, previousTimeout);
+			
+			return timeoutDuration;
+		}, 0);
+	</script>
+</body>
+</html>

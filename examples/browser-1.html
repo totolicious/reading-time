@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Determine the reading time of a text</title>
+</head>
+<body>
+	<script src="../index.js"></script>
+	<script>
+	var text,
+		defaultText = 'This is a simple javascript function that estimates the read duration of a string.';
+
+	var text = prompt('Please type your preferred text. Press enter for default text') || defaultText;
+	alert('It takes about ' + Math.round(readingTime(text)/1000, 2) + 's to focus and read this text:\n\"' + text + '\"');
+	</script>
+</body>
+</html>

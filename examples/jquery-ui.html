@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Determine the reading time of a text</title>
+	<link rel="stylesheet" type="text/css" href="http://github.hubspot.com/tooltip/css/tooltip-theme-arrows.css">
+</head>
+<body>
+	<div id="test"></div>
+
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<small>
+		This page was made with HubSpot's
+		<a href="http://github.hubspot.com/tooltip/" target="_blank">
+			tooltip component
+		</a>
+	</small>
+
+	<script src="http://github.hubspot.com/tooltip/tooltip.js"></script>
+	<script src="../index.js"></script>
+	<script>
+		var text = 'This is a simple message that disappears after a comfortable timeout. The timeout is set automatically',
+			targetElement = document.getElementById('test'),
+			tooltip = new Tooltip({
+				target: targetElement,
+				position: 'bottom right',
+				content: text
+			});
+
+			tooltip.open();
+			setTimeout(function() {
+				tooltip.close();
+			}, readingTime(text));
+	</script>
+</body>
+</html>
