@@ -1,4 +1,4 @@
-#reading-timeout
+#reading-time
 
 This is a simple javascript function that estimates the read duration of a string.
 
