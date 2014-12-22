@@ -1,6 +1,6 @@
 #reading-time
 
-This is a simple javascript function that estimates the read duration of a string.
+This is a simple javascript function that estimates the reading duration of a string.
 
 It is useful to set timeouts for various messages that appear in temporary UI elements such as popups and hints.
 
@@ -9,7 +9,7 @@ It is useful to set timeouts for various messages that appear in temporary UI el
 ```
 var text = 'This is a simple javascript function that estimates the read duration of a string.';
 
-alert('It takes ' + readTime(text)) + 's to read this text:\n'+text);
+alert('It takes ' + readingTime(text)) + 's to read this text:\n'+text);
 ```
 
 
